@@ -1,0 +1,91 @@
+.dialer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.number-display {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    padding: 10px;
+    width: 80%;
+    color: #333;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.keypad-button {
+    width: 70px;
+    height: 70px;
+    border: none;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.keypad-button:active {
+    background-color: #d1d1d1;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    margin-top: 20px;
+}
+
+.call-button {
+    width: 80px;
+    height: 80px;
+    background-color: #28a745;
+    color: white;
+    font-size: 2rem;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.call-button:active {
+    background-color: #218838;
+}
+
+.delete-button {
+    width: 50px;
+    height: 50px;
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.delete-button:active {
+    background-color: #e63939;
+}

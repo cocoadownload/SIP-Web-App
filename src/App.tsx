@@ -1,7 +1,8 @@
-import { Redirect, Route } from 'react-router-dom';
-import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import {Dialer } from './components/Dialer'
+import React from "react";
+import {IonApp, IonRouterOutlet, setupIonicReact} from "@ionic/react";
+import { IonReactRouter } from "@ionic/react-router";
+import { Route, Redirect } from "react-router-dom";
+import Dialer from "./components/Dialer";
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -18,6 +19,8 @@ import '@ionic/react/css/text-alignment.css';
 import '@ionic/react/css/text-transformation.css';
 import '@ionic/react/css/flex-utils.css';
 import '@ionic/react/css/display.css';
+import '@ionic/react/css/core.css';
+
 
 /**
  * Ionic Dark Mode
@@ -36,19 +39,19 @@ import './theme/variables.css';
 setupIonicReact();
 
 const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonRouterOutlet>
-        {/* Default route: Redirect to Dialer */}
-        <Route exact path="/">
-          <Redirect to="/dialer" />
-        </Route>
+    <IonApp>
+        <IonReactRouter>
+            <IonRouterOutlet>
+                {/* Default route: Redirect to Dialer */}
+                <Route exact path="/">
+                    <Redirect to="/dialer" />
+                </Route>
 
-        {/* Dialer route */}
-        <Route path="/dialer" component={Dialer} exact />
-      </IonRouterOutlet>
-    </IonReactRouter>
-  </IonApp>
+                {/* Dialer route */}
+                <Route path="/dialer" component={Dialer} exact />
+            </IonRouterOutlet>
+        </IonReactRouter>
+    </IonApp>
 );
 
 export default App;
